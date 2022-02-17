@@ -1,0 +1,9 @@
+.app{
+    background-color: #111;
+    height : 100vh;
+
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+
+    
+}
