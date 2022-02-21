@@ -1,11 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import { useHistory } from "react-router-dom";
 import "./PlanScreen.css";
 
 function PlanScreen(){
 
     const history = useHistory();
-    const [state, setState] = useState(0);
 
     return(
         <div className="planScreen">

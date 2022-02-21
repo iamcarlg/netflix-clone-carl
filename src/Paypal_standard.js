@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { PayPalButton } from "react-paypal-button-v2";
 import "./Paypal_standard.css";
 
@@ -7,9 +7,11 @@ import { selectUser } from "./features/userSlice";
 
 import Nav from "./Nav";
 
+
 function Paypal_standard(){
     const payment = useSelector(selectUser);
-    
+    const [subscribed, setSubscribed] = useState(false);
+
     return(
         <div className="paypal">
 
@@ -54,7 +56,8 @@ function Paypal_standard(){
                 onSuccess={(details, data) => {
                     alert("Transaction completed by " + details.payer.name.given_name);
                     console.log({ details, data });
-        
+                    setSubscribed(true);
+
                 }}
                 />
 
